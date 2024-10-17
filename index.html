@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holobooth with Hand Tracking</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+    video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+  </style>
+</head>
+<body>
+  <video id="webcam" autoplay></video>
+  <div id="container"></div>
+
+  <!-- Load Three.js for 3D -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <!-- Load TensorFlow.js and HandPose -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+  
+  <!-- Script file for holobooth -->
+  <script src="holobooth.js"></script>
+</body>
+</html>
